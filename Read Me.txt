@@ -1,0 +1,2 @@
+Please before running project 
+write command "npm i" in terminal 

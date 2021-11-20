@@ -1,0 +1,33 @@
+<!-- <div class="container">
+    <section class="mx-auto my-5" style="max-width: 23rem;" *ngFor="let i of Persons">
+      <div class="card">
+        <div class="card-body d-flex flex-row">
+          <img [src]="i.avatar" class="rounded-circle me-3" height="50px"
+            width="50px" alt="avatar" />
+          <div>
+            <a class="btn btn-warning mx-1" [routerLink]="['/details/',i.id]">{{i.name}}</a>
+            <h4 class="card-title font-weight-bold mb-2">{{i.name}}</h4>
+            <h6 class="card-title font-weight-bold mb-2">{{i.email}}</h6>
+            <p class="card-text"><i class="far fa-clock pe-2"></i>{{i.dob|getAge}} , {{i.country}} </p>
+          </div>
+        </div>
+        </div>
+    </section>
+  </div> -->
+  <div class="container mt-5 d-flex justify-content-center" >
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mx-3" [routerLink]="['/details/',i.id]" *ngFor="let i of Persons">
+        <div class="my-card"> <img class="my-card-img" [src]="i.avatar" />
+            <div class="my-card-body trainer-card-body">
+                <h5>{{i.name}}</h5>
+                <span style="font-weight: 200;">E-mail: </span> <span>{{i.email}}</span><br>
+                <span style="font-weight: 200;">Age: </span> <span>{{i.dob|getAge}}</span><br>
+                <span style="font-weight: 200;">Country: </span> <span>{{i.country}}</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
