@@ -35,4 +35,17 @@ Save(){
   this.apiSer.AddPerson(this.obj).subscribe(a=>{
     this.route.navigateByUrl("/home")}); 
  }
+
+ chkAge(obj:any){
+   debugger;
+
+  let DOB=new Date(obj);
+  let today=new Date();
+  let Diff=DOB.getFullYear()-today.getFullYear()
+  if(Diff<7)
+  {
+    alert("Please you must over 7 years old")
+    this.obj.dob="2014-01-01";
+  }
+ }
 }

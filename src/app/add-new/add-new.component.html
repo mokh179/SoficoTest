@@ -19,14 +19,15 @@
                     <input type="email" id="form3Example3cg" class="form-control form-control-lg" [(ngModel)]="obj.email"/>
                   </div>
                   <div class="form-outline mb-4">
-                    <label class="form-label select-label">Choose option</label> <br>
+                    <label class="form-label select-label">Select Country</label> <br>
                      <select class="select form-control-lg form-control" [(ngModel)]="obj.country">
-                       <option [value]="i" *ngFor="let i of Contries">{{i}}</option>
+  
+                       <option [value]="i" *ngFor="let i of Contries" >{{i}}</option>
                      </select>
                  </div>
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example4cg">DOB</label>
-                    <input type="date" id="DOB" class="form-control form-control-lg" [(ngModel)]="obj.dob"/>
+                    <input type="date" id="DOB" #DOB class="form-control form-control-lg" (change)="chkAge(DOB.value)" [(ngModel)]="obj.dob"/>
                   </div>
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example4cg">Your Avatar </label>

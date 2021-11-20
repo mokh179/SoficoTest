@@ -29,7 +29,7 @@
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example4cg">DOB</label>
                     <p *ngIf="!edit">{{person.dob|date}}</p>
-                    <input type="date" id="DOB" class="form-control form-control-lg" [(ngModel)]="person.dob" *ngIf="edit"/>
+                    <input type="date" id="DOB" #DOB class="form-control form-control-lg" (change)="chkAge(DOB.value)" [(ngModel)]="person.dob" *ngIf="edit"/>
                   </div>
                   <div class="form-outline mb-4" *ngIf="edit">
                     <label class="form-label" for="form3Example4cg">Your Avatar </label>

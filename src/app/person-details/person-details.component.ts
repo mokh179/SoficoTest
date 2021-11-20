@@ -28,7 +28,7 @@ export class PersonDetailsComponent implements OnInit {
       var reader=new FileReader();
       reader.readAsDataURL(event.target.files[0])
       reader.onload=(event:any)=>{
-        this.URl=event.target.result
+        this.person.avatar=event.target.result
       }
     }
     }
@@ -36,6 +36,20 @@ export class PersonDetailsComponent implements OnInit {
   updateInfo(){
 this.edit=!this.edit;
   }
+
+  chkAge(obj:any){
+    debugger;
+   let DOB=new Date(obj);
+   let today=new Date();
+   let Diff=DOB.getFullYear()-today.getFullYear()
+  if(Diff<7)
+  {
+    alert("Please you must over 7 years old")
+    this.person.dob="2014-01-01";
+  }
+   
+  }
+
 Edit(){
   console.log(this.person)
   this.person.avatar=this.URl
