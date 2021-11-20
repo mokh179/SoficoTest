@@ -15,7 +15,7 @@
     </section>
   </div> -->
   <div class="container mt-5 d-flex justify-content-center" >
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mx-3" [routerLink]="['/details/',i.id]" *ngFor="let i of Persons">
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mx-3" [routerLink]="['/details/',i.id]" *ngFor="let i of Persons" style="cursor: pointer;">
         <div class="my-card"> <img class="my-card-img" [src]="i.avatar" />
             <div class="my-card-body trainer-card-body">
                 <h5>{{i.name}}</h5>
